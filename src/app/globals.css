@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #6A0DAD; /* Luxe Purple */
+  --color-secondary: #D4AF37; /* Gold Accent */
+  --color-tertiary: #008080; /* Deep Teal */
+  --color-accent: #C71585; /* Rich Magenta */
+  --color-background: #FFFFFF;
+  --color-text: #333333;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#6A0DAD] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#D4AF37] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-[#6A0DAD] text-[#6A0DAD] px-6 py-3 rounded-md hover:bg-[#6A0DAD] hover:text-white transition-all;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
