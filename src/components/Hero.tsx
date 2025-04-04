@@ -1,32 +1,13 @@
-import React from 'react'
-
-export const Hero = () => {
+export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-[#6A0DAD] to-[#C71585] text-white py-20">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Travel Authentically. Live Luxuriously. Belong Anywhere.
-            </h1>
-            <p className="text-xl opacity-90">
-              Bespoke, luxurious travel experiences crafted by and for the LGBTQ+ community and allies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="btn-secondary">Explore Destinations</button>
-              <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#6A0DAD] transition-all">
-                Plan Your Journey
-              </button>
-            </div>
-          </div>
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-            {/* Image placeholder - will be replaced with actual image in Codespaces */}
-            <div className="absolute inset-0 bg-[#C71585] bg-opacity-30 flex items-center justify-center">
-              <span className="text-white text-lg font-medium">Hero Image: Diverse LGBTQ+ travelers in luxury setting</span>
-            </div>
-          </div>
-        </div>
+    <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">QueerLuxe Travel Studio</h1>
+        <p className="text-xl md:text-2xl mb-8">Luxury travel experiences designed for the LGBTQ+ community</p>
+        <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors">
+          Explore Destinations
+        </button>
       </div>
     </section>
-  )
+  );
 }

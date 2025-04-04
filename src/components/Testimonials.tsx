@@ -1,69 +1,48 @@
-import React from 'react'
+export default function Testimonials() {
+  const testimonials = [
+    {
+      id: '1',
+      name: 'Alex Johnson',
+      location: 'New York, USA',
+      quote: 'QueerLuxe Travel Studio created the most amazing experience for my husband and me on our honeymoon. Every detail was perfect!',
+      image: '/images/testimonial-1.jpg'
+    },
+    {
+      id: '2',
+      name: 'Sophia Chen',
+      location: 'London, UK',
+      quote: 'As a trans woman, I was concerned about travel safety. QueerLuxe made me feel secure and celebrated throughout my entire journey.',
+      image: '/images/testimonial-2.jpg'
+    },
+    {
+      id: '3',
+      name: 'Marcus & David',
+      location: 'Sydney, Australia',
+      quote: 'The luxury accommodations and exclusive experiences were beyond our expectations. We\'ve already booked our next trip!',
+      image: '/images/testimonial-3.jpg'
+    }
+  ];
 
-export const Testimonials = () => {
   return (
-    <section className="py-20 bg-[#6A0DAD] text-white">
-      <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">The House of QueerLuxe Testimonials</h2>
-          <p className="text-lg opacity-90">
-            Hear from travelers who've experienced the QueerLuxe difference
-          </p>
-        </div>
+    <section className="py-16 bg-purple-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">What Our Travelers Say</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg p-6 shadow-lg text-gray-800">
-            <div className="mb-4">
-              <p className="italic text-gray-600">
-                "QueerLuxe transformed my travel experience from apprehension to absolute joy. For the first time, I felt celebrated rather than merely tolerated. The attention to detail was impeccable!"
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-[#D4AF37] rounded-full mr-4"></div>
-              <div>
-                <h4 className="font-bold">Jordan T.</h4>
-                <p className="text-sm text-gray-500">Tokyo Adventure, 2024</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 bg-purple-100 rounded-full mb-4">
+                  {/* Placeholder for image */}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
+                <p className="text-gray-500 text-sm mb-4">{testimonial.location}</p>
+                <p className="text-gray-600 text-center italic">"{testimonial.quote}"</p>
               </div>
             </div>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-lg text-gray-800">
-            <div className="mb-4">
-              <p className="italic text-gray-600">
-                "As a trans woman, finding travel experiences where I'm truly welcomed can be challenging. QueerLuxe not only found me safe spaces, but places where I was celebrated. The luxury yacht experience in Greece was beyond my wildest dreams!"
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-[#C71585] rounded-full mr-4"></div>
-              <div>
-                <h4 className="font-bold">Sophia R.</h4>
-                <p className="text-sm text-gray-500">Greek Islands Cruise, 2024</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-lg text-gray-800">
-            <div className="mb-4">
-              <p className="italic text-gray-600">
-                "Our honeymoon had to be perfect, and QueerLuxe delivered beyond our expectations. From the private villa in Bali to the personalized welcome at every hotel, we felt like royalty. This is how travel should be!"
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-[#008080] rounded-full mr-4"></div>
-              <div>
-                <h4 className="font-bold">Marcus & David</h4>
-                <p className="text-sm text-gray-500">Honeymoon Tour, 2023</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="text-center mt-12">
-          <button className="bg-white text-[#6A0DAD] px-6 py-3 rounded-md hover:bg-opacity-90 transition-all">
-            Read More Stories
-          </button>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
